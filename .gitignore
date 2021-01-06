@@ -1,0 +1,7 @@
+.DS_STORE
+.idea
+.vscode
+node_modules
+yarn.lock
+.env
+.env.test
