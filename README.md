@@ -1,5 +1,4 @@
 <h1 align="center"><strong>API VUTTR</strong></h1>
----
 
 ## 💬 Sobre
 
@@ -13,12 +12,13 @@ A aplicação VUTTR (Very Useful Tools to Remember) é um repositório para gere
 - **Yarn**
 - **MongoDB**
 - **Swagger**
-
+  
 ## 🛤 Rotas da Aplicação
 
 - **` POST /tools `**: Rota para cadastrar uma nova ferramenta. O corpo da requisição deve conter os dados da ferramenta (título, link, descrição e tags) que será cadastrada, sem o identificador, pois será gerado automaticamente.
 
-
+- **` PUT /tools/{id} `**: Rota para atualizar uma ferramenta. O corpo da requisição deve conter os dados da ferramenta que serão atualizados. O parâmetro ``` id ``` é o identificador da ferramenta retornado ao cadastrar ou listar a(s) ferramenta(s). 
+- 
 - **` GET /tools `**: Rota para listar todas as ferramentas cadastradas. É possível paginar essa listagem através dos parâmetros ``` page ``` e ``` limit ```. Exemplo de paginação: ``` /tools?page=2&limit=10 ```
 
 - **` GET /tools?tag={tags} `**: Rota para listar as ferramentas filtrando-as pelas tags que desejar. Para inserir mais de uma tag no filtro, basta utilizar a vírgula como separador. Exemplo: ``` /tools?tag=tag1,tag2 ```
