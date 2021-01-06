@@ -4,6 +4,8 @@
 
 A aplicação VUTTR (Very Useful Tools to Remember) é um repositório para gerenciar ferramentas com seus respectivos nomes, links, descrições e tags.
 
+A documentação da API está disponível [aqui](https://app.swaggerhub.com/apis/pabloquadrado/Vuttr/1.0.0).
+
 ## 📋 Tecnologias Utilizadas
 
 - **NodeJS**
@@ -12,6 +14,13 @@ A aplicação VUTTR (Very Useful Tools to Remember) é um repositório para gere
 - **Yarn**
 - **MongoDB**
 - **Swagger**
+
+## 🖥 Instalação
+
+1. Clonar o projeto
+2. Criar o .env e .env.test configurando as variáveis de ambiente contidas no .env.example. ``` PORT ``` define em qual porta irá rodar o servidor e ``` DATABASE_STRING_CONNECTION ``` define os dados de configuração do banco de dados em mongoDB.
+3. Instalar as dependências do projeto através de ``` yarn ``` ou ``` npm install ```
+4. Para rodar o servidor basta executar ``` yarn dev ``` ou ``` npm dev ```
   
 ## 🛤 Rotas da Aplicação
 
@@ -26,6 +35,8 @@ A aplicação VUTTR (Very Useful Tools to Remember) é um repositório para gere
 - **` DELETE /tools/{id} `**: Rota para deletar uma ferramenta.
 
 ## ⚙️ Testes
+
+Para executar os testes, basta executar ``` yarn test ``` ou ``` npm test ```
 
 - **` should be able to create a new tool `**: Para que o teste passe, a API deve criar a ferramenta e retornar um json com os dados da ferramenta criada (inclusve o identificador gerado).
 
@@ -42,3 +53,7 @@ A aplicação VUTTR (Very Useful Tools to Remember) é um repositório para gere
 - **` should be able to delete a tool `**: Para que esse teste passe, a API deve deletar uma ferramenta.
 
 - **` should not be able to delete a tool that not exists `**: Para que esse teste passe, a API não deve deletar uma ferramenta que não existe.
+
+## 🚀 Deploy
+
+A API está disponível [aqui](https://api-vuttr-bossabox.herokuapp.com/tools).
